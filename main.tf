@@ -88,7 +88,7 @@ resource "github_repository_deploy_key" "main" {
   title      = var.deploy_key_name
   repository = var.repository_name
   key        = tls_private_key.main.public_key_openssh
-  read_only  = true
+  read_only  = var.deploy_key_readonly
 }
 
 resource "github_repository_file" "install" {
