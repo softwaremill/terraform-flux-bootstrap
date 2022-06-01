@@ -22,3 +22,9 @@ variable "github_owner" {
   description = "GitHub owner of the repository"
   type        = string
 }
+
+variable "deploy_key_readonly" {
+  description = "Whether the deployment key should be read-only or should allow write operations"
+  type        = bool
+  default     = false
+}
